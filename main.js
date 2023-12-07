@@ -6,21 +6,21 @@ V Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kin
 V Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
 */
 
-let arr = [5,65,9,783,5,8,7];
+let arr = [5, 65, 9, 783, 5, 8, 7];
 printArr(arr);
 console.log(rndInt(20, 40));
-let rndArr = rndIntArr(5,10,20);
+let rndArr = rndIntArr(5, 10, 20);
 printArr(rndArr);
 console.log(sumIntArr(rndArr));
 console.log(avgNumArr(rndArr));
 
 function printArr(arr) {
-   let res = "";
-   for (let i = 0; i < arr.length; i++) {
-    res += arr[i] + ", ";
-    
-   }
-   console.log(res.substring(0,res.length - 2));
+    let res = "";
+    for (let i = 0; i < arr.length; i++) {
+        res += arr[i] + ", ";
+
+    }
+    console.log(res.substring(0, res.length - 2));
 }
 
 function rndInt(max, min = 0) {
@@ -31,10 +31,10 @@ function rndDouble(max, min = 0) {
     return min + Math.random() * (max - min);
 }
 
-function rndIntArr(min,max,len) {
+function rndIntArr(min, max, len) {
     let arr = [];
     for (let i = 0; i < len; i++) {
-      arr[i] = rndInt(min,max);
+        arr[i] = rndInt(min, max);
     }
     return arr;
 }
@@ -42,11 +42,10 @@ function rndIntArr(min,max,len) {
 function sumIntArr(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
-     sum += arr[i];        
+        sum += arr[i];
     }
     return sum;
 }
-
 
 function avgNumArr(arr) {
     return sumIntArr(arr) / arr.length;
